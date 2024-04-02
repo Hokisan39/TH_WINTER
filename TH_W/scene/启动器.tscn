@@ -1,0 +1,66 @@
+[gd_scene load_steps=5 format=3 uid="uid://cdotu4vj2x4qs"]
+
+[ext_resource type="Texture2D" uid="uid://cuwbumhycp6bs" path="res://picture/starter_picture/background/king_kanako.png" id="1_ye15n"]
+[ext_resource type="Texture2D" uid="uid://dbuln17f7tnfs" path="res://picture/starter_picture/frame.png" id="2_u3qwu"]
+[ext_resource type="Texture2D" uid="uid://dr7snnsyvsvhj" path="res://picture/starter_picture/botton.png" id="3_0jfqb"]
+[ext_resource type="Script" path="res://code/ui_sys/button.gd" id="3_wfuve"]
+
+[node name="启动器" type="Node2D"]
+
+[node name="背景" type="Node2D" parent="."]
+
+[node name="背景图片" type="Sprite2D" parent="背景"]
+modulate = Color(0.364706, 0.364706, 0.364706, 1)
+position = Vector2(400, 300)
+scale = Vector2(8, 8)
+texture = ExtResource("1_ye15n")
+
+[node name="框" type="Sprite2D" parent="背景"]
+position = Vector2(400, 300)
+scale = Vector2(10, 10)
+texture = ExtResource("2_u3qwu")
+
+[node name="按钮" type="Node2D" parent="."]
+modulate = Color(0.745098, 0.745098, 0.745098, 1)
+
+[node name="启动按钮" type="Node2D" parent="按钮"]
+position = Vector2(100, 500)
+scale = Vector2(3, 3)
+script = ExtResource("3_wfuve")
+
+[node name="Button" type="Button" parent="按钮/启动按钮"]
+offset_left = -20.0
+offset_top = -10.0
+offset_right = 20.0
+offset_bottom = 10.0
+
+[node name="Sprite2D" type="Sprite2D" parent="按钮/启动按钮"]
+texture = ExtResource("3_0jfqb")
+
+[node name="设置按钮" type="Node2D" parent="按钮"]
+position = Vector2(300, 500)
+scale = Vector2(3, 3)
+script = ExtResource("3_wfuve")
+
+[node name="Button" type="Button" parent="按钮/设置按钮"]
+offset_left = -20.0
+offset_top = -10.0
+offset_right = 20.0
+offset_bottom = 10.0
+
+[node name="Sprite2D" type="Sprite2D" parent="按钮/设置按钮"]
+texture = ExtResource("3_0jfqb")
+
+[node name="退出按钮" type="Node2D" parent="按钮"]
+position = Vector2(500, 500)
+scale = Vector2(3, 3)
+script = ExtResource("3_wfuve")
+
+[node name="Button" type="Button" parent="按钮/退出按钮"]
+offset_left = -20.0
+offset_top = -10.0
+offset_right = 20.0
+offset_bottom = 10.0
+
+[node name="Sprite2D" type="Sprite2D" parent="按钮/退出按钮"]
+texture = ExtResource("3_0jfqb")
